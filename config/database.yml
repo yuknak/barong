@@ -4,12 +4,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS", 6).to_i * ENV.fetch("WEB_CONCURRENCY", 1).to_i %>
   host: <%= ENV.fetch('DATABASE_HOST', '127.0.0.1') %>
   port: <%= ENV.fetch('DATABASE_PORT', 3306) %>
-  username: <%= ENV.fetch('DATABASE_USER', 'root') %>
-  password: <%= ENV.fetch('DATABASE_PASS', '') %>
+  username: <%= ENV.fetch('DATABASE_USER', 'ror') %>
+  password: <%= ENV.fetch('DATABASE_PASS', 'ror') %>
 
 development:
   <<: *default
-  database: barong_development
+  database: barong_dev
 
 test:
   <<: *default
@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV.fetch('DATABASE_NAME', 'barong_production') %>
+  database: <%= ENV.fetch('DATABASE_NAME', 'barong_prod') %>
