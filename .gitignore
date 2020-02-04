@@ -28,3 +28,6 @@
 /config/master.key
 
 .idea/
+
+# Add
+/vendor/bundle
